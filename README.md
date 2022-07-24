@@ -1,2 +1,3 @@
-# jsonresume-theme-swilson
-My custom theme for my personal JSONRésumé
+# Sean Wilson's custom JSON Résumé theme
+
+Learn more about [JSON Résumé](https://jsonresume.org/)

@@ -1,0 +1,26 @@
+{
+	"name": "@romancow/jsonresume-theme-swilson",
+	"version": "1.0.0",
+	"description": "Sean Wilson's custom JSON Résumé theme",
+	"main": "index.js",
+	"scripts": {
+	},
+	"repository": "git://github.com/romancow/jsonresume-theme-swilson.git",
+	"keywords": [
+		"json",
+		"résumé",
+		"JSONResume",
+		"theme"
+	],
+	"author": {
+		"name" : "Sean Wilson",
+		"email" : "contact@seanwilson.dev",
+		"url" : "http://seanwilson.dev/"
+	},
+	"license": "GPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/romancow/jsonresume-theme-swilson/issues"
+	},
+	"homepage": "https://github.com/romancow/jsonresume-theme-swilson#readme",
+	"devDependencies": {}
+}
