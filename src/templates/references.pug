@@ -1,3 +1,10 @@
 include section
 
 +section("thumbs-up", "References")
+	each reference of references
+		figure.reference
+			figcaption
+				cite= reference.name
+				span.position= reference.position
+				span.at= reference.at
+			blockquote!= markdown(reference.reference)
