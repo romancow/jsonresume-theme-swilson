@@ -6,7 +6,4 @@ include section
 			li.interest
 				if interest.name
 					.name= interest.name
-				unless Object.isEmpty(interest.keywords)
-					ul.keywords
-						each keyword in interest.keywords
-							li.keyword= keyword
+				+keywords(interest.keywords)

@@ -10,3 +10,9 @@ mixin section(icon, title, right)
 		.section-content
 			if block
 				block
+
+mixin keywords(keywords)
+	unless Object.isEmpty(keywords)
+		ul.keywords
+			each keyword in keywords
+				li.keyword= keyword
