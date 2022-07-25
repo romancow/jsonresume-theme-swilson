@@ -1,4 +1,4 @@
-const MarkdownIt = require("markdown-it")
+const md = require("markdown-it")()
 const Sugar = require("sugar").extend()
 
 Sugar.Object.defineInstanceAndStatic({
@@ -58,9 +58,9 @@ function utilities(resume) {
 			(match) => [".", "_", ")"].includes(match) ? "-" : ""
 		) ?? "",
 
-		markdown: (md => function(str) {
-			return md.render(str ?? "")
-		})(new MarkdownIt())
+		markdown(str) {
+			return md.renderInline(str ?? "")
+		}
 	}
 }
 
