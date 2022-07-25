@@ -29,6 +29,11 @@ function utilities(resume) {
 			return Object.isDefined(value) ? value : defaultValue
 		},
 
+		isEmpty: function(key) {
+			const value = Object.get(resume, key)
+			return Object.isEmpty(value)
+		},
+
 		join: function(keys, separator = ", ") {
 			return keys
 				.map(key => Object.get(resume, key))

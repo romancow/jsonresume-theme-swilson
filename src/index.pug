@@ -2,13 +2,19 @@ html
 	head
 		title #{get("basics.name", "Someone")}'s Résumé
 	body
-		include templates/header.pug
+		include templates/header
 		main
 			.primary
-				#profile
-				#work-experience
+				unless isEmpty("basics.summary")
+					include templates/profile
+				unless isEmpty("work")
+					include templates/work
 			.side
-				#skills
-				#education
-				#interests
-				#references
+				unless isEmpty("skills")
+					include templates/skills
+				unless isEmpty("education")
+					include templates/education
+				unless isEmpty("interests")
+					include templates/interests
+				unless isEmpty("references")
+					include templates/references
