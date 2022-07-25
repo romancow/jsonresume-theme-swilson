@@ -19,9 +19,9 @@ header#basics
 				title= "Visit " + ((basics.name != null) ? basics.name + "'s" : "their") + " website"
 			)= basics.url
 	.title
-		.name= get("basics.name", "")
+		h1.name= get("basics.name", "")
 		if has("basics.label")
-			.label #{basics.label}
+			h2.label #{basics.label}
 	ul.socials
 		each profile in get("basics.profiles", [])
 			li.social(class=lowercase(profile.network))
