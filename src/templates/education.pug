@@ -1,3 +1,24 @@
 include section
 
 +section("building-columns", "Education")
+	ul
+		each degree in education
+			li.degree
+				h4
+					if degree.institution
+						span.institution= degree.institution
+					if degree.endDate
+						span.end-date= degree.endDate
+				if degree.studyType || degree.score
+					.subtitle
+						i.fa-solid.fa-graduation-cap
+						if degree.studyType
+							span.study-type= degree.studyType
+						if degree.score
+							span.score= degree.score
+				if degree.area
+					.area= degree.area
+				if degree.honors
+					ul.honors
+						each honor in degree.honors
+							li.honor!= markdown(honor)
