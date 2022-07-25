@@ -1,0 +1,12 @@
+mixin section(icon, title, right)
+	section(id=dasherize(title))&attributes(attributes)
+		h3.section-header
+			if icon
+				i.fa-solid(class="fa-" + icon)
+			if title
+				span.title= title
+			if right
+				span.right= right
+		.section-content
+			if block
+				block
