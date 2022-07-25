@@ -17,6 +17,13 @@ Sugar.Array.defineInstanceAndStatic({
 	}
 })
 
+const markdown = function(str) {
+	return md.render(str ?? "")
+}
+markdown.inline = function(str) {
+	return md.renderInline(str ?? "")
+}
+
 function utilities(resume) {
 	return {
 		...resume,
@@ -58,9 +65,7 @@ function utilities(resume) {
 			(match) => [".", "_", ")"].includes(match) ? "-" : ""
 		) ?? "",
 
-		markdown(str) {
-			return md.renderInline(str ?? "")
-		}
+		markdown
 	}
 }
 
