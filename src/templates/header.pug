@@ -1,28 +1,28 @@
-header
-	#contact
+header#basics
+	.contact
 		if has("basics.location")
-			#location= join(["basics.location.city", "basics.location.region"])
+			.location= join(["basics.location.city", "basics.location.region"])
 		if has("basics.email")
-			a#email(
+			a.email(
 				href="mailto:" + basics.email,
 				title=["Email", basics.name].compactJoin(" ")
 			)= basics.email
 		if has("basics.phone")
-			a#phone(
+			a.phone(
 				href="tel:" + normalizedPhone,
 				title=["Call", basics.name].compactJoin(" ")
 			)= basics.phone
 		if has("basics.url")
-			a#url(
+			a.url(
 				href=basics.url,
 				target="_blank",
 				title= "Visit " + ((basics.name != null) ? basics.name + "'s" : "their") + " website"
 			)= basics.url
-	#title
-		#name= get("basics.name", "")
+	.title
+		.name= get("basics.name", "")
 		if has("basics.label")
-			#label #{basics.label}
-	ul#socials
+			.label #{basics.label}
+	ul.socials
 		each profile in get("basics.profiles", [])
 			li.social(class=lowercase(profile.network))
 				a(
