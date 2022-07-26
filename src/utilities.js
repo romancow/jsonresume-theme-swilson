@@ -2,18 +2,26 @@ const md = require("markdown-it")()
 const Sugar = require("sugar").extend()
 
 Sugar.Object.defineInstanceAndStatic({
-	isDefined: function(value) {
+	isDefined(value) {
 		return (value != null) || (value === null)
 	}
 })
 
 Sugar.Array.defineInstanceAndStatic({
-	compactJoin: function(items, separator) {
+	compactJoin(items, separator) {
 		return items
 			.compact()
 			.map('toString')
 			.filter(item => !!item.length)
 			.join(separator)
+	}
+})
+
+Sugar.Date.defineStatic({
+	formatYears(start, end) {
+		const years = Date.range(start, end).years()
+		return (years < 1) ? null :
+			years + ((years > 1) ? " years" : " year")
 	}
 })
 
@@ -60,12 +68,26 @@ function utilities(resume) {
 				.dasherize()
 		},
 
+		formatWorkDate(dateStr) {
+			if ((dateStr == null) || (/^\d{4}$/.test(dateStr)))
+				return dateStr
+			const date = Date.create(dateStr)
+			return date.isValid() ?
+				date.format("{Mon} {year}") :
+				dateStr
+		},
+
+		markdown,
+
 		normalizedPhone: resume?.basics?.phone?.replace(
 			/[^\d\+-]/g,
 			(match) => [".", "_", ")"].includes(match) ? "-" : ""
 		) ?? "",
 
-		markdown
+		workYears: Date.formatYears(
+			resume.work.map('startDate').compact(true).min(),
+			resume.work.map('endDate').compact(true).max()
+		)
 	}
 }
 
