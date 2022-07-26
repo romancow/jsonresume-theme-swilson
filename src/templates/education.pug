@@ -6,7 +6,13 @@ include section
 			li.degree
 				h4
 					if degree.institution
-						span.institution= degree.institution
+						if degree.url
+							a.institution(
+								href=degree.url,
+								target="_blank"
+							)= degree.institution
+						else
+							span.institution= degree.institution
 					if degree.endDate
 						span.end-date= degree.endDate
 				if degree.studyType || degree.score
