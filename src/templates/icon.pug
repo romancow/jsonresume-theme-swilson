@@ -1,4 +1,5 @@
-mixin icon(name)
-	i.fa-solid(class="fa-" + name)
+mixin icon(...types)
+	- if (types.length === 1) types.unshift("solid")
+	i(class=types.map(t => "fa-" + t))
 		if block
 			block
