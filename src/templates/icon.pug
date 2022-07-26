@@ -1,5 +1,5 @@
 mixin icon(...types)
 	- if (types.length === 1) types.unshift("solid")
-	i(class=types.map(t => "fa-" + t))
+	i.fa(class=types.map(t => "fa-" + t))
 		if block
 			block

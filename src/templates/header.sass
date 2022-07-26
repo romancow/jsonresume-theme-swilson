@@ -1,0 +1,45 @@
+header#basics
+	flex-direction: row
+	height: 1.4in
+	padding: 12px
+	background-color: var(--header-bg-color)
+	color: var(--header-font-color)
+
+	.contact
+		justify-content: center
+		font-size: 11pt
+
+		& > *
+			flex-direction: row
+
+			i.fa
+				width: 20px
+				height: 20px
+				margin-right: 14px
+
+	.title
+		flex: 1
+		align-items: center
+		justify-content: center
+		text-transform: uppercase
+	
+		> *
+			font-weight: normal
+
+		.name
+			font-size: 30pt
+			border: solid var(--header-font-color) 2pt
+			padding: 6px 12px
+
+		.label
+			font-family: var(--header-font)
+			font-size: 20pt
+
+
+	.socials
+		flex-direction: row
+		align-items: center
+		font-size: 40pt
+
+		.social
+			margin-left: 24px

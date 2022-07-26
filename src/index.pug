@@ -2,16 +2,17 @@ doctype html
 html
 	head
 		link(href="../node_modules/@fortawesome/fontawesome-free/css/all.css", rel="stylesheet")
+		link(href="styles.css", rel="stylesheet")
 		title #{get("basics.name", "Someone")}'s Résumé
 	body
 		include templates/header
 		main
-			.primary
+			.column.primary
 				unless isEmpty("basics.summary")
 					include templates/profile
 				unless isEmpty("work")
 					include templates/work
-			.side
+			.column.side
 				unless isEmpty("skills")
 					include templates/skills
 				unless isEmpty("education")

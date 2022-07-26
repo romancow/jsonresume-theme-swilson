@@ -1,0 +1,38 @@
+@forward "templates/header"
+
+:root
+	--header-bg-color: #232323
+	--header-font-color: #fbfbfb
+	--header-font: "Roboto Slab", serif
+
+body
+	font-family: Helvetica, sans-serif
+	color: #333
+
+	&, & > header, & > main
+		width: 100%
+
+	// reset
+	&, & *
+		box-sizing: border-box
+		flex-direction: column
+		margin: 0
+		padding: 0
+
+		header, main, div, section, ul
+			display: flex
+
+		a
+			color: unset
+			text-decoration: none
+
+			
+			&::first-line, > :not(.fa)
+				text-decoration: underline
+				text-decoration-thickness: 0.5px
+
+		ul
+			list-style: none
+
+
+
