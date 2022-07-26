@@ -17,7 +17,7 @@ include section
 						span.end-date= degree.endDate
 				if degree.studyType || degree.score
 					.subtitle
-						i.fa-solid.fa-graduation-cap
+						+icon("graduation-cap")
 						if degree.studyType
 							span.study-type= degree.studyType
 						if degree.score
