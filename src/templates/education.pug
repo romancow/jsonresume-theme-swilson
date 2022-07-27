@@ -27,4 +27,4 @@ include section
 				if degree.honors
 					ul.honors
 						each honor in degree.honors
-							li.honor!= markdown.inline(honor)
+							li.honor.md!= markdown.inline(honor)

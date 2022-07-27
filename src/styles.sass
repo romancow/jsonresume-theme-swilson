@@ -38,12 +38,15 @@ body
 			text-decoration: none
 
 			
-			&::first-line, > :not(.fa)
-				text-decoration: underline
-				text-decoration-thickness: 0.5px
+		.md a, a::first-line, a > :not(.fa)
+			text-decoration: underline
+			text-decoration-thickness: 0.5px
 
 		ul
 			list-style: none
+
+		p:not(:last-child)
+			margin-bottom: 8px
 
 	main
 		flex-direction: row
@@ -55,6 +58,3 @@ body
 
 			&.side
 				flex-basis: 3in
-
-
-

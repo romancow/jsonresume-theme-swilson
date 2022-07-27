@@ -25,10 +25,10 @@ include section
 							if started
 								.start= started
 				if job.summary
-					.summary!= markdown(job.summary)
+					.summary.md!= markdown(job.summary)
 				unless Object.isEmpty(job.highlights)
 					details.highlights
 						summary Highlights
 						ul
 							each highlight in job.highlights
-								li.highlight!= markdown.inline(highlight)
+								li.highlight.md!= markdown.inline(highlight)
