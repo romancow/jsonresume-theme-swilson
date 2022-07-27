@@ -1,0 +1,38 @@
+$content-border: 0.5px solid var(--accent-bg-color)
+
+section.section
+	padding: 12px
+
+	.section-header
+		border: 0.5px solid var(--secondary-bg-color)
+		height: 0.4in
+		align-items: center
+		padding: 4px
+		text-transform: uppercase
+		font-family: var(--secondary-font)
+		font-size: 15pt
+
+		i.fa
+			width: 28px
+			height: 28px
+
+		.title
+			flex: 1
+			margin-left: 4px
+
+		.right
+			font-size: 13pt
+
+			&:last-child
+				margin-right: 8px
+	
+	.section-content
+		border: $content-border
+		border-top: none
+
+		> ul > li
+			padding: 8px
+
+			&:not(:last-child)
+				border-bottom: $content-border
+

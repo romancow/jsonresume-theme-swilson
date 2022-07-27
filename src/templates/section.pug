@@ -1,14 +1,14 @@
 include icon
 
 mixin section(icon, title, right, rightIcon)
-	section(id=dasherize(title))&attributes(attributes)
+	section.section(id=dasherize(title))&attributes(attributes)
 		h3.section-header
 			if icon
 				+icon(icon)
 			if title
 				span.title= title
 			if rightIcon
-				+icon(rightIcon)
+				+icon(rightIcon)(class="right")
 			if right
 				span.right= right
 		.section-content
