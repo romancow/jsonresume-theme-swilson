@@ -33,3 +33,20 @@ section.section
 		> ul > li:not(:last-child)
 			border-bottom: $content-border
 
+	.keywords
+		flex-flow: row wrap
+		font-weight: bold
+		font-size: 10pt
+		font-variant: small-caps
+		margin-top: -2px
+
+		.keyword
+			background-color: var(--accent-bg-color)
+			color: var(--secondary-font-color)
+			padding: 0 3px
+			margin-top: 2px
+			border-radius: 5px
+
+			&:not(:last-child)
+				margin-right: 4px
+
