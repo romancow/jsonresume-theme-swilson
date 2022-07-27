@@ -1,0 +1,27 @@
+$primary-bg: var(--primary-bg-color)
+$primary-font: var(--primary-font-color)
+$secondary-bg: var(--secondary-bg-color)
+$secondary-font: var(--secondary-font-color)
+$accent-bg: var(--accent-bg-color)
+$accent-font: var(--accent-font-color)
+
+@mixin vars
+	--primary-bg-color: #fbfbfb
+	--primary-font-color: #333
+	--secondary-bg-color: #232323
+	--secondary-font-color: #fbfbfb
+	--accent-bg-color: #8b95a2
+	--accent-font-color: #777777
+
+@mixin primary
+	background-color: $primary-bg
+	color: $primary-font
+
+@mixin secondary
+	background-color: $secondary-bg
+	color: $secondary-font
+
+@mixin accent
+	background-color: $accent-bg
+	color: $secondary-font
+	text-shadow: 1pt 1pt rgba(0,0,0,0.3)

@@ -1,8 +1,10 @@
+@use "colors"
+@use "fonts"
+
 header#basics
+	@include colors.secondary
 	height: 1.4in
 	padding: 12px
-	background-color: var(--secondary-bg-color)
-	color: var(--secondary-font-color)
 
 	.contact
 		justify-content: center
@@ -27,11 +29,11 @@ header#basics
 
 		.name
 			font-size: 30pt
-			border: solid var(--secondary-font-color) 2pt
+			border: 2pt solid colors.$secondary-font
 			padding: 6px 12px
 
 		.label
-			font-family: var(--secondary-font)
+			font-family: fonts.$secondary
 			font-size: 20pt
 
 

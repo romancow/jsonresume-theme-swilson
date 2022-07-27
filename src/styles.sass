@@ -1,26 +1,22 @@
-@forward "styles/icon"
-@forward "styles/header"
-@forward "styles/section"
-@forward "styles/profile"
-@forward "styles/work"
-@forward "styles/skills"
-@forward "styles/education"
-@forward "styles/interests"
-@forward "styles/references"
+@use "styles/colors"
+@use "styles/fonts"
+@use "styles/icon"
+@use "styles/header"
+@use "styles/section"
+@use "styles/profile"
+@use "styles/work"
+@use "styles/skills"
+@use "styles/education"
+@use "styles/interests"
+@use "styles/references"
 
 :root
-	--primary-bg-color: #fbfbfb
-	--primary-font-color: #333
-	--primary-font: Helvetica, sans-serif
-	--secondary-bg-color: #232323
-	--secondary-font-color: #fbfbfb
-	--secondary-font: "Roboto Slab", serif
-	--accent-bg-color: #8b95a2
-	--accent-font-color: #777777
+	@include colors.vars
+	@include fonts.vars
 
 body
-	font-family: var(--primary-font)
-	color: var(--primary-font-color)
+	font-family: fonts.$primary
+	color: colors.$primary-font
 
 	&, & > header, & > main
 		width: 100%
