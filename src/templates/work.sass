@@ -1,0 +1,68 @@
+.section#work-experience
+
+	.section-content li
+		header
+			background-color: var(--accent-bg-color)
+			color: var(--secondary-font-color)
+			text-shadow: 1pt 1pt rgba(0,0,0,0.3)
+			height: 0.5in
+			align-items: center
+			padding-left: 8px
+			font-size: 12pt
+
+			.role
+				flex: 1
+
+				.position
+					font-family: var(--secondary-font)
+					font-weight: bold
+
+			.employer
+				flex-direction: row
+				align-items: center
+
+				.name
+					font-style: oblique
+
+				.location
+					font-size: 10pt
+					margin-left: 4px
+			
+			.dates
+				width: 1.27in
+				height: 100%
+				align-items: center
+				justify-content: center
+				border-left: 1px dotted var(--secondary-font-color)
+				font-weight: bold
+				font-variant: small-caps
+
+				.end:not(.start)::after
+					content: '...'
+					align-self: center
+					line-height: 4px
+					position: relative
+					top: -4px
+
+		.summary, .highlights
+			padding: 8px
+
+		.summary
+			font-size: 11pt
+
+		.highlights
+			font-size: 10pt
+
+			summary
+				font-size: 11pt
+				font-weight: bold
+				font-variant: small-caps
+				text-decoration: underline
+
+			ul
+				padding-left: 4px
+				
+				li::before
+					content: "•"
+					margin-right: 4px
+

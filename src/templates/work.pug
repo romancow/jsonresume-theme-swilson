@@ -1,6 +1,6 @@
 include section
 
-+section("briefcase", "Work Experience", workYears, "clock-nine")
++section("briefcase", "Work Experience", workYears, "clock")
 	ul.jobs
 		each job of work
 			li.job
@@ -11,7 +11,10 @@ include section
 						if job.name || job.location
 							.employer
 								if job.name
-									span.name= job.name
+									if job.url
+										a.name(href=job.url, target="_blank")= job.name
+									else
+										span.name= job.name
 								if job.location
 									span.location= "(" + job.location + ")"
 					.dates
