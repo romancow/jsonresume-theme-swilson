@@ -23,6 +23,7 @@
 	"homepage": "https://github.com/romancow/jsonresume-theme-swilson#readme",
 	"devDependencies": {
 		"pug": "^3.0.2",
+		"sass": "^1.54.0",
 		"typescript": "^4.7.4"
 	},
 	"dependencies": {
