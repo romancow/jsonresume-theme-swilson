@@ -1,0 +1,37 @@
+.section#references
+
+	.section-content
+
+		figure.reference
+			padding: 8px
+			font-size: 11pt
+
+			figcaption
+				cite
+					font-style: normal
+
+				.position
+					font-style: oblique
+					font-size: 10pt
+
+					&:not(:first-child)::before
+						content: ", "
+
+				.at
+					display: flex
+					font-weight: bold
+
+			blockquote
+				margin-top: 3pt
+				position: relative
+				color: var(--accent-font-color)
+				font-style: italic
+				padding-left: 10px
+
+				&::before
+					position: absolute
+					content: "“"
+					left: 4px
+
+				& > :last-child::after
+					content: "”"

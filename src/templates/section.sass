@@ -30,8 +30,9 @@ section.section
 		border: $content-border
 		border-top: none
 
-		> ul > li:not(:last-child)
-			border-bottom: $content-border
+		> ul > li, figure
+			&:not(:last-child)
+				border-bottom: $content-border
 
 	.keywords
 		flex-flow: row wrap
