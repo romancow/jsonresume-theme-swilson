@@ -3,7 +3,7 @@
 
 .section#work-experience
 
-	.section-content li
+	.section-content .job
 		header
 			@include colors.accent
 			height: 0.5in
@@ -45,25 +45,24 @@
 					position: relative
 					top: -4px
 
-		.summary, .highlights
+		> .summary, > .highlights
 			padding: 8px
 
-		.summary
+		> .summary
 			font-size: 11pt
 
-		.highlights
-			font-size: 10pt
+		> .highlights
+			padding-top: 0
 
-			summary
-				font-size: 11pt
+			> .summary
 				font-weight: bold
 				font-variant: small-caps
 				text-decoration: underline
 
-			ul
-				padding-left: 4px
-				
-				li::before
-					content: "•"
-					margin-right: 4px
+			> .disclosure
+				font-size: 10pt
+				padding-top: 4px
 
+			ul
+				margin-left: 16px
+				list-style: outside

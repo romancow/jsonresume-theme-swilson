@@ -1,4 +1,5 @@
 include section
+include details
 
 +section("briefcase", "Work Experience", workYears, "clock")
 	ul.jobs
@@ -30,8 +31,7 @@ include section
 				if job.summary
 					.summary.md!= markdown(job.summary)
 				unless Object.isEmpty(job.highlights)
-					details.highlights
-						summary Highlights
+					+details("Highlights")(class="highlights")
 						ul
 							each highlight in job.highlights
 								li.highlight.md!= markdown.inline(highlight)
