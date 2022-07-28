@@ -1,7 +1,6 @@
 mixin details(summary, open)
-	.details&attributes(attributes)
+	.details(class={ open })&attributes(attributes)
 		.summary(
-			class={ open },
 			onclick!="((ev) => { ev.target.parentElement.classList.toggle('open') })(arguments[0])"
 		)= summary
 		.disclosure
