@@ -4,7 +4,10 @@ html
 		link(href="../node_modules/@fortawesome/fontawesome-free/css/all.css", rel="stylesheet")
 		link(href="styles.css", rel="stylesheet")
 		title #{get("basics.name", "Someone")}'s Résumé
-	body
+	body(
+		style="opacity: 0;",
+		onload!="((ev) => { document.body.classList.add('loaded') })(arguments[0])"
+	)
 		include templates/header
 		main
 			.column.primary
