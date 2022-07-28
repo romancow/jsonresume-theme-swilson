@@ -1,13 +1,13 @@
-@use "colors"
-@use "fonts"
+@import "colors"
+@import "fonts"
 
 :root
-	@include colors.vars
-	@include fonts.vars
+	color-vars()
+	font-vars()
 
 body
-	font-family: fonts.$primary
-	color: colors.$primary-font
+	font-family: $fonts.primary
+	color: $colors.primary.font
 	transition: opacity 0.5s ease-in
 
 	&, & > header, & > main
@@ -33,7 +33,7 @@ body
 			text-decoration: none
 
 		.md .accent
-			color: colors.$accent-font
+			color: $colors.accent.font
 			font-size: 90%
 
 		.md a, a::first-line, a > :not(.fa)

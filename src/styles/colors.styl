@@ -1,0 +1,35 @@
+$colors = {
+	primary: {
+		bg: var(--primary-bg-color),
+		font: var(--primary-font-color)
+	},
+	secondary: {
+		bg: var(--secondary-bg-color),
+		font: var(--secondary-font-color)
+	},
+	accent: {
+		bg: var(--accent-bg-color),
+		font: var(--accent-font-color)
+	}
+}
+
+color-vars()
+	--primary-bg-color: #fbfbfb
+	--primary-font-color: #333
+	--secondary-bg-color: #232323
+	--secondary-font-color: #fbfbfb
+	--accent-bg-color: #8b95a2
+	--accent-font-color: #777777
+
+color-primary()
+	background-color: $colors.primary.bg
+	color: $colors.primary.font
+
+color-secondary()
+	background-color: $colors.secondary.bg
+	color: $colors.secondary.font
+
+color-accent()
+	background-color: $colors.accent.bg
+	color: $colors.secondary.font
+	text-shadow: 1pt 1pt rgba(0,0,0,0.3)

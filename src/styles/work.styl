@@ -1,11 +1,11 @@
-@use "colors"
-@use "fonts"
+@import "colors"
+@import "fonts"
 
 .section#work-experience
 
 	.section-content .job
 		header
-			@include colors.accent
+			color-accent()
 			height: 0.5in
 			align-items: center
 			padding-left: 8px
@@ -15,7 +15,7 @@
 				flex: 1
 
 				.position
-					font-family: fonts.$secondary
+					font-family: $fonts.secondary
 					font-weight: bold
 
 			.employer
@@ -34,7 +34,7 @@
 				height: 100%
 				align-items: center
 				justify-content: center
-				border-left: 1px dotted colors.$secondary-font
+				border-left: 1px dotted $colors.secondary.font
 				font-weight: bold
 				font-variant: small-caps
 

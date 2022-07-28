@@ -1,8 +1,8 @@
-@use "colors"
-@use "fonts"
+@import "colors"
+@import "fonts"
 
 header#basics
-	@include colors.secondary
+	color-secondary()
 	height: 1.4in
 	padding: 12px
 
@@ -29,11 +29,11 @@ header#basics
 
 		.name
 			font-size: 30pt
-			border: 2pt solid colors.$secondary-font
+			border: 2pt solid $colors.secondary.font
 			padding: 6px 12px
 
 		.label
-			font-family: fonts.$secondary
+			font-family: $fonts.secondary
 			font-size: 20pt
 
 
