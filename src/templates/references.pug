@@ -4,7 +4,11 @@ include section
 	each reference of references
 		figure.reference
 			figcaption
-				cite= reference.name
-				span.position= reference.position
-				span.at= reference.at
-			blockquote.md!= markdown(reference.reference)
+				if reference.name
+					cite= reference.name
+				if reference.position
+					span.position= reference.position
+				if reference.at
+					span.at= reference.at
+			if reference.reference
+				blockquote.md!= markdown(reference.reference)
