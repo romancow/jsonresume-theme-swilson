@@ -2,7 +2,8 @@ doctype html
 html
 	head
 		link(href="../node_modules/@fortawesome/fontawesome-free/css/all.css", rel="stylesheet")
-		link(href="styles.css", rel="stylesheet")
+		style
+			include:stylus styles/index.styl
 		title #{get("basics.name", "Someone")}'s Résumé
 	body(
 		style="opacity: 0;",
