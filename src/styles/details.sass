@@ -1,0 +1,59 @@
+// an element similar to the HTML details element, but with animated marker & disclosure
+.details
+	overflow: hidden
+
+	> .summary
+		display: inline-block
+		cursor: pointer
+		z-index: 1
+
+		&::before
+			content: "▶"
+			display: inline-block
+			text-decoration: none
+			margin-right: 2px
+			font-size: 80%
+			transform: rotate(90deg)
+			transition: transform 0.3s ease-in-out
+
+		&::after
+			content: "(Click to expand)"
+			font-size: 80%
+			margin-left: 100px
+			text-decoration: none
+			font-variant: normal
+			font-weight: normal
+			font-style: oblique
+			opacity: 0
+			display: inline-block
+			transition: all 0.2s ease-in-out
+
+	> .disclosure
+		position: relative
+		
+		> .content
+
+			&.hidden
+				visibility: hidden
+				transition: font-size 0.3s ease-in-out
+
+			&:not(.hidden)
+				position: absolute
+				transition: opacity 0.3s ease-in-out 0.1s
+
+	&:not(.open)
+
+		> .summary
+
+			&::before
+				transform: rotate(0deg)
+
+			&::after
+				opacity: 0.5
+				margin-left: 8px
+
+		> .disclosure > .content
+			opacity: 0
+
+			&.hidden
+				font-size: 0px

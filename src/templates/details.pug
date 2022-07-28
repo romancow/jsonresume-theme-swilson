@@ -1,0 +1,12 @@
+mixin details(summary, open)
+	.details&attributes(attributes)
+		.summary(
+			class={ open },
+			onclick!="((ev) => { ev.target.parentElement.classList.toggle('open') })(arguments[0])"
+		)= summary
+		.disclosure
+			if block
+				.content.hidden(aria-hidden="true")
+					block
+				.content
+					block
