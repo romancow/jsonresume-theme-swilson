@@ -1,6 +1,6 @@
 const pug = require("pug")
 const stylus = require('stylus')
-const utilities = require("../src/utilities.js")
+const utilities = require("./utilities.js")
 
 const filters = {
 	stylus(text, options) {
