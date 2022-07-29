@@ -1,3 +1,4 @@
+const path = require('path')
 const pug = require("pug")
 const stylus = require('stylus')
 const utilities = require("./utilities.js")
@@ -11,7 +12,8 @@ const filters = {
 
 module.exports = {
 	render(resume) {
+		const template = path.join(__dirname, 'template.pug')
 		const options = { filters, ...utilities(resume) }
-		return pug.renderFile("index.pug", options)
+		return pug.renderFile(template, options)
 	}
 }
