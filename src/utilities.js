@@ -1,4 +1,5 @@
 const md = require("markdown-it")({ html: true })
+const mila = require("markdown-it-link-attributes")
 const Sugar = require("sugar").extend()
 
 Sugar.Object.defineInstanceAndStatic({
@@ -25,6 +26,7 @@ Sugar.Date.defineStatic({
 	}
 })
 
+md.use(mila, { attrs: { target: "_blank" }})
 const markdown = function(str) {
 	return md.render(str ?? "")
 }
