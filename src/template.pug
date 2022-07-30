@@ -10,6 +10,8 @@ html
 
 	body(style="opacity: 0;")
 		include templates/header
+		unless isEmpty("basics.notes")
+			include templates/notes
 		main
 			.column.primary
 				unless isEmpty("basics.summary")

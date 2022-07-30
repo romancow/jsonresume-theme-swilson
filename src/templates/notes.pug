@@ -1,0 +1,3 @@
+aside#notes
+	each note of get("basics.notes", [])
+		p.md!= markdown.inline(note)
