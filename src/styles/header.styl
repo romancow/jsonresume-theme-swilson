@@ -30,13 +30,23 @@ header#basics
 
 		.name
 			font-size: 30pt
-			border: 2pt solid $colors.secondary.font
 			padding: 6px 12px
+			border: 2pt solid transparent
+			transition: border-color 2s ease-out 1s
+
+			/.loaded &
+				border-color: $colors.secondary.font
 
 		.label
 			font-family: $fonts.secondary
 			font-size: 20pt
+			transform: translateY(20px)
+			opacity: 0
+			transition: all 0.5s ease-out 0.5s
 
+			/.loaded &
+				transform: none
+				opacity: 1
 
 	.socials
 		flex-direction: row
