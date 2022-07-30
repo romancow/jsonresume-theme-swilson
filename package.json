@@ -1,6 +1,6 @@
 {
 	"name": "@romancow/jsonresume-theme-swilson",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Sean Wilson's custom JSON Résumé theme",
 	"main": "src/index.js",
 	"scripts": {},
