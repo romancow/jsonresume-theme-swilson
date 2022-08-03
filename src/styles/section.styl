@@ -47,10 +47,16 @@ section.section
 
 		.keyword
 			color-accent()
+			cursor: default
 			padding: 0 3px
 			margin-top: 2px
 			border-radius: 5px
+			transition: all 0.2s ease-in-out
 
 			&:not(:last-child)
 				margin-right: 4px
+
+			&:hover
+				transform: scale(1.1)
+				box-shadow: 0px 3px 5px rgba(0,0,0,0.5)
 
