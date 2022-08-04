@@ -1,4 +1,5 @@
 include icon
+include details
 
 mixin section(icon, title, right, rightIcon)
 	section.section(id=dasherize(title))&attributes(attributes)
@@ -20,3 +21,22 @@ mixin keywords(keywords)
 		ul.keywords
 			each keyword in keywords
 				li.keyword= keyword
+
+mixin date-range(obj)
+	.dates
+		- const started = formatWorkDate(obj.startDate)
+		- const ended = formatWorkDate(obj.endDate)
+		if (started === ended) && ended
+			.start.end= ended
+		else
+			if ended
+				.end= ended
+			if started
+				.start= started
+
+mixin highlights(obj)
+	unless Object.isEmpty(obj.highlights)
+		+details("Highlights")(class="highlights")
+			ul
+				each highlight in obj.highlights
+					li.highlight.md!= markdown.inline(highlight)

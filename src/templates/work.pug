@@ -1,5 +1,4 @@
 include section
-include details
 
 +section("briefcase", "Work Experience", workYears, "clock")
 	ul.jobs
@@ -18,20 +17,7 @@ include details
 										span.name= job.name
 								if job.location
 									span.location= "(" + job.location + ")"
-					.dates
-						- const started = formatWorkDate(job.startDate)
-						- const ended = formatWorkDate(job.endDate)
-						if (started === ended) && ended
-							.start.end= ended
-						else
-							if ended
-								.end= ended
-							if started
-								.start= started
+					+date-range(job)
 				if job.summary
 					.summary.md!= markdown(job.summary)
-				unless Object.isEmpty(job.highlights)
-					+details("Highlights")(class="highlights")
-						ul
-							each highlight in job.highlights
-								li.highlight.md!= markdown.inline(highlight)
+				+highlights(job)
