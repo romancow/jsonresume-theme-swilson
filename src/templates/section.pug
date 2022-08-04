@@ -29,10 +29,10 @@ mixin date-range(obj)
 		if (started === ended) && ended
 			.start.end= ended
 		else
-			if ended
-				.end= ended
 			if started
 				.start= started
+			if ended
+				.end= ended
 
 mixin highlights(obj)
 	unless Object.isEmpty(obj.highlights)
