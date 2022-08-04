@@ -15,6 +15,16 @@ Sugar.Array.defineInstanceAndStatic({
 			.map('toString')
 			.filter(item => !!item.length)
 			.join(separator)
+	},
+
+	friendlyJoin(items, and) {
+		and ??= "and"
+		const copy = [...items]
+		const last = copy.pop()
+		return copy.length ? (copy.length > 1) ?
+			[...copy, and].join(", ") + " " + last :
+			items.join(" " +and + " ") :
+			last
 	}
 })
 
