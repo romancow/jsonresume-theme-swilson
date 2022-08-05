@@ -18,12 +18,12 @@ mixin section(icon, title, right, rightIcon)
 
 mixin keywords(keywords)
 	unless Object.isEmpty(keywords)
-		ul.keywords
+		ul.keywords&attributes(attributes)
 			each keyword in keywords
 				li.keyword= keyword
 
 mixin date-range(obj)
-	.dates
+	.dates&attributes(attributes)
 		- const started = formatWorkDate(obj.startDate)
 		- const ended = formatWorkDate(obj.endDate)
 		if (started === ended) && ended

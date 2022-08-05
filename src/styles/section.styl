@@ -38,6 +38,29 @@ section.section
 			&:not(:last-child)
 				border-bottom: $content-border
 
+		h4
+			font-size: 13pt
+			font-weight: bold
+
+			> :first-child
+				font-style: oblique
+
+			> .right
+				display: inline-flex
+				flex-direction: row
+				flex: 1
+				justify-content: flex-end
+
+		.subtitle
+			flex-direction: row
+			align-items: center
+			color: $colors.accent.font
+
+			i.fa
+					width: 20px
+					height: 20px
+					margin-right: 4px
+
 	.keywords
 		flex-flow: row wrap
 		font-weight: bold
@@ -74,3 +97,6 @@ section.section
 		ul
 			margin-left: 16px
 			list-style: outside
+
+	.dates
+		font-variant: small-caps
