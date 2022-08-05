@@ -18,6 +18,8 @@ html
 					include templates/profile
 				unless isEmpty("work")
 					include templates/work
+				unless isEmpty("projects")
+					include templates/projects
 			.column.side
 				unless isEmpty("skills")
 					include templates/skills
