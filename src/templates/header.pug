@@ -32,12 +32,17 @@ header#basics
 		h1.name= get("basics.name", "")
 		if has("basics.label")
 			h2.label #{basics.label}
-	ul.socials
+	ul.profiles
 		each profile in get("basics.profiles", [])
-			li.social
-				a(
+			li.profile
+				a.network(
 					href=profile.url,
 					target="_blank",
 					title=[profile.username, profile.network].compactJoin(" on ")
 				)
 					+icon("brands", lowercase(profile.network))
+				if profile.username
+					a.username(
+						href=profile.url,
+						target="_blank"
+					)= profile.username

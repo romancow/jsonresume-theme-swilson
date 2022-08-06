@@ -7,6 +7,9 @@ header#basics
 	padding: 12px
 	margin-bottom: 10px
 
+	> *
+		flex: 1
+
 	.contact
 		justify-content: center
 		font-size: 11pt
@@ -20,7 +23,6 @@ header#basics
 				margin-right: 14px
 
 	.title
-		flex: 1
 		align-items: center
 		justify-content: center
 		text-transform: uppercase
@@ -48,10 +50,37 @@ header#basics
 				transform: none
 				opacity: 1
 
-	.socials
+	.profiles
 		flex-direction: row
-		align-items: center
-		font-size: 35pt
+		align-items: stretch
+		justify-content: flex-end
 
-		.social
-			margin-right: 24px
+		.profile
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			overflow-x: visible
+			margin-right: 20px
+
+			.network
+				font-size: 36pt
+				transition: transform 0.2s ease-out
+
+			.username
+				display: inline-flex
+				align-items: center
+				max-width: 32px
+				font-size: 8pt
+				text-decoration: none
+				opacity: 0
+				transform: translateY(6px)
+				transition: all 0.2s ease-out
+
+			&:hover
+				.network
+					transform: scale(0.75)
+
+				.username
+					opacity: 1
+					transform: translateY(-4px)
