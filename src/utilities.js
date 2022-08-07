@@ -80,12 +80,14 @@ function utilities(resume) {
 				.dasherize()
 		},
 
-		formatWorkDate(dateStr) {
+		formatDate(dateStr, includeDay = true) {
+			const format = (!includeDay || /^\d{,4}(-\d{,2})?$/.test(dateStr)) ?
+				"{Mon} {year}" : "{Mon} {date}, {year}"
 			if ((dateStr == null) || (/^\d{4}$/.test(dateStr)))
 				return dateStr
 			const date = Date.create(dateStr)
 			return date.isValid() ?
-				date.format("{Mon} {year}") :
+				date.format(format) :
 				dateStr
 		},
 

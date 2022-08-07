@@ -14,7 +14,7 @@ include section
 						else
 							span.institution= degree.institution
 					if degree.endDate
-						span.end-date.right= degree.endDate
+						span.end-date.right= formatDate(degree.endDate)
 				if degree.studyType || degree.score
 					.subtitle
 						+icon("graduation-cap")

@@ -24,8 +24,8 @@ mixin keywords(keywords)
 
 mixin date-range(obj)
 	.dates&attributes(attributes)
-		- const started = formatWorkDate(obj.startDate)
-		- const ended = formatWorkDate(obj.endDate)
+		- const started = formatDate(obj.startDate, false)
+		- const ended = formatDate(obj.endDate, false)
 		if (started === ended) && ended
 			.start.end= ended
 		else
