@@ -1,23 +1,5 @@
 include section
+include positions
 
 +section("briefcase", "Work Experience", workYears, "clock")
-	ul.jobs
-		each job of work
-			li.job
-				header
-					.role
-						if job.position
-							.position= job.position
-						if job.name || job.location
-							.employer
-								if job.name
-									if job.url
-										a.name(href=job.url, target="_blank")= job.name
-									else
-										span.name= job.name
-								if job.location
-									span.location= "(" + job.location + ")"
-					+date-range(job)
-				if job.summary
-					.summary.md!= markdown(job.summary)
-				+highlights(job)
+	+positions(work, "name")(class="work")

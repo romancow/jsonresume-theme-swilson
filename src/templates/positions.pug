@@ -1,0 +1,24 @@
+include section
+
+mixin positions(positions, nameField)
+	ul.positions&attributes(attributes)
+		each position of positions
+			li.position
+				header
+					.role
+						if position.position
+							.position= position.position
+						- const name = position[nameField]
+						if name || position.location
+							.organization
+								if name
+									if position.url
+										a.name(href=position.url, target="_blank")= name
+									else
+										span.name= name
+								if position.location
+									span.location= "(" + position.location + ")"
+					+date-range(position)
+				if position.summary
+					.summary.md!= markdown(position.summary)
+				+highlights(position)

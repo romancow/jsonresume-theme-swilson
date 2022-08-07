@@ -1,0 +1,52 @@
+@import "colors"
+@import "fonts"
+
+ul.positions .position
+	header
+		color-accent()
+		height: 0.5in
+		align-items: center
+		padding-left: 8px
+		font-size: 12pt
+
+		.role
+			flex: 1
+
+			.position
+				font-family: $fonts.secondary
+				font-weight: bold
+
+		.organization
+			flex-direction: row
+			align-items: center
+
+			.name
+				font-style: oblique
+
+			.location
+				font-size: 10pt
+				margin-left: 4px
+		
+		.dates
+			width: 1.27in
+			height: 100%
+			flex-direction: column-reverse
+			align-items: center
+			justify-content: center
+			border-left: 1px dotted $colors.secondary.font
+			font-weight: bold
+			font-variant: small-caps
+
+			.end:not(.start)::after
+				content: '...'
+				align-self: center
+				line-height: 4px
+				position: relative
+				top: -4px
+
+	> .summary
+		font-size: 11pt
+		padding: 8px
+
+	> .highlights
+		padding: 0 8px 8px 8px
