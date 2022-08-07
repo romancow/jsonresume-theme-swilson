@@ -27,6 +27,12 @@ html
 					include templates/skills
 				unless isEmpty("education")
 					include templates/education
+				unless isEmpty("awards")
+					include templates/awards
+				unless isEmpty("certificates")
+					include templates/certificates
+				unless isEmpty("publications")
+					include templates/publications
 				unless isEmpty("interests")
 					include templates/interests
 				unless isEmpty("references")

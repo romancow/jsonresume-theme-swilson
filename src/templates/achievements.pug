@@ -1,0 +1,25 @@
+mixin achievements(achievements, nameField, institutionField, dateField)
+	ul.achievements
+		each achievement in achievements
+			-
+				const [name, institution, date] = [
+					achievement[nameField],
+					achievement[institutionField],
+					achievement[dateField ?? "date"]
+				]
+			li.achievement
+				.achieved
+					if name
+						if achievement.url
+							a.name(
+								href=achievement.url,
+								target="_blank"
+							)= name
+						else
+							span.name= name
+					if date
+						span.date= formatDate(date)
+				if institution
+					.institution= institution
+				if achievement.summary
+					.summary!= markdown(achievement.summary)
