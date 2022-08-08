@@ -1,12 +1,5 @@
 include section
+include abilities
 
 +section("wrench", "Skills")
-	ul
-		each skill in skills
-			li.skill
-				if skill.name
-					.name= skill.name
-				if skill.level
-					.level= skill.level
-				+keywords(skill.keywords)
-
+	+abilities(skills)

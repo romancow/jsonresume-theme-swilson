@@ -1,9 +1,5 @@
 include section
+include abilities
 
 +section("heart", "Interests")
-	ul
-		each interest of interests
-			li.interest
-				if interest.name
-					.name= interest.name
-				+keywords(interest.keywords)
+	+abilities(interests)

@@ -1,0 +1,16 @@
+include section
+
+mixin abilities(abilities, nameField, levelField)
+	ul.abilities&attributes(attributes)
+		each ability in abilities
+			-
+				const [name, level] = [
+					ability[nameField ?? "name"],
+					ability[levelField ?? "level"]
+				]
+			li.ability
+				if name
+					.name= name
+				if level
+					.level= level
+				+keywords(ability.keywords)
