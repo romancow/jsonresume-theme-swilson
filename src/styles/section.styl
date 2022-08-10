@@ -6,6 +6,12 @@ $content-border = 0.5px solid $colors.accent.bg
 section.section
 	color-primary()
 	margin: 12px
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1)
+	transition: box-shadow 0.2s ease-out, transform 0.2s ease-out
+
+	&:hover
+		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3)
+		transform: scale(1.01)
 
 	.section-header
 		border: 0.5px solid $colors.secondary.bg
