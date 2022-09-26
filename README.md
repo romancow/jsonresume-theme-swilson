@@ -14,13 +14,14 @@ Add this theme package as a a dependency to your project containing your résum�
 1) Create a GitHub access token with (at least) a `packages:read` scope.
 
 2) Add a scope mapping and the access token for the GitHub npm package manager by adding a `.npmrc` file with lines:
-
+```
 	@romancow:registry=https://npm.pkg.github.com/
 	//npm.pkg.github.com/:_authToken=YOUR_AUTH_TOKEN_HERE
+```
 
 3) Install the package:
 
-	npm install @romancow/jsonresume-theme-swilson
+	`npm install @romancow/jsonresume-theme-swilson`
 
 You should then be able to use a package like [`resumed`](https://www.npmjs.com/package/resumed) or [`resume-cli`](https://www.npmjs.com/package/resume-cli) to render your résumé using this theme, specifiying the "swilson" theme if necessary (`--theme swilson`).
 
@@ -33,9 +34,9 @@ There are a few extra json fields the swilson theme uses in addtion to the stand
 	<dt><code>basics.notes</code> <em>(string[])</em></dt>
 	<dd>General notes to show at the top of the résumé beneath the header. Used on my own résumé to show a "Learn more" link.</dd>
 	<dt><code>projects[].icon</code> <em>(string)</em></dt>
-	<dd>The name of a [FontAwesome](https://fontawesome.com/icons) icon to show underneath the project name. This allows you to customize the icon to fit the type of project.</dd>
+	<dd>The name of a <a href="https://fontawesome.com/icons">FontAwesome</a> icon to show underneath the project name. This allows you to customize the icon to fit the type of project.</dd>
 	<dt><code>education[].honors</code> <em>(string[])</em></dt>
-	<dd>A list of education related honors you may have received. For example, "Valedictorian" or [latin honors](https://en.wikipedia.org/wiki/Latin_honors).</dd>
+	<dd>A list of education related honors you may have received. For example, "Valedictorian" or <a href="https://en.wikipedia.org/wiki/Latin_honors">latin honors</a>.</dd>
 	<dt><code>references[].at</code> <em>(string)</em></dt>
 	<dd>The name of a company or organization (or just generally the significance) of the person providing the reference.</dd>
 	<dt><code>references[].position</code> <em>(string)</em></dt>
