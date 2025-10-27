@@ -3,7 +3,9 @@
 	"version": "1.2.2",
 	"description": "Sean Wilson's custom JSON Résumé theme",
 	"main": "src/index.js",
-	"scripts": {},
+	"scripts": {
+		"test:render": "resumed render ./test/resume.json --theme jsonresume-theme-local --output ./build/resume.html"
+	},
 	"repository": "git://github.com/romancow/jsonresume-theme-swilson.git",
 	"keywords": [
 		"json",
@@ -27,5 +29,9 @@
 		"pug": "^3.0.2",
 		"stylus": "^0.58.1",
 		"sugar": "^2.0.6"
+	},
+	"devDependencies": {
+		"jsonresume-theme-local": "file:./",
+		"resumed": "^6.1.0"
 	}
 }
