@@ -100,7 +100,9 @@ function utilities(resume) {
 
 		workYears: Date.formatYears(
 			resume.work.map('startDate').compact(true).min(),
-			resume.work.map('endDate').compact(true).max()
+			resume.work.map(({ startDate, endDate }) =>
+				((endDate == null) && (startDate != null)) ? new Date() : endDate
+			).compact(true).max()
 		)
 	}
 }

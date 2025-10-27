@@ -31,6 +31,8 @@ mixin date-range(obj)
 		else
 			if started
 				.start= started
+				if ended == null
+					.end Present
 			if ended
 				.end= ended
 
